@@ -1,0 +1,199 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --main-color : #d1e6a5;
+}
+.sellProduct-main-container{    
+    width: 100%;
+    
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 3em;
+
+}
+.sellProduct-wrapper{
+    width: 100%;
+    display: flex;
+    z-index: 2;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+}
+
+.sellProduct-heading{
+    font-size: 3rem;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+.product-container{
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    flex-wrap: wrap;
+    
+}
+
+.product{
+   
+    border-radius: 20px;
+    
+    width: 400px;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+  
+}
+
+.product:hover::before{
+    bottom: 0;
+}
+.product-details{
+    position: absolute;
+    top: 30%;
+    left: 7%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1em;
+}
+
+.bid-info{
+    display: flex;
+    width: 100%;
+    font-size: 1.2rem;
+    
+}
+.current-bid{
+    width: 50%;
+}
+.current-bid p{
+    margin: 0;
+
+}
+.highest-bidder{
+    width: 50%;
+
+}
+.highest-bidder p{
+    margin: 0;
+
+}
+.sell-btn{
+    width: 100%;
+
+}
+.sell-btn button{
+    width: 40%;
+    background-color: rgb(0, 0, 0,0);
+    color: white;
+    border: 1px white solid;
+    font-size: 1.4rem;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+   
+}
+.sell-btn button:hover::before{
+    left: 0;
+}
+.sell-btn button::before{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    content: "";
+    left: -100%;
+    top: 0;
+    transition: left 0.4s ease;
+    position: absolute;
+    z-index: -1;
+
+
+}
+
+.product::before{
+    content: "";
+    bottom: -30%;
+    left: 0;
+    background-image: linear-gradient(rgb(0, 0, 0,0) , rgb(0, 0, 0,1));
+    transition: bottom 0.4s ease;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+/* .product-img{
+    background-image: url("../img/wheat.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+} */
+.product-img-1{
+    
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+.product-img-2{
+    background-image: url("../img/corn.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+.add-product-btn{
+    
+    margin-top: 3em;
+   padding: 0.5em 2em 0.5em 2em;
+   font-size: 1.7rem;
+    font-weight: 600;
+    border: 1px var(--main-color) solid;
+    color: #9eaf7b;
+    background-color:rgb(0, 0, 0,0);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+.add-product-btn:hover::before{
+    left: 0;
+
+}
+.add-product-btn::before{
+    background-color:rgb(0, 0, 0);
+    content: "";
+    top: 0;
+    left: -100%;
+    transition: left 0.4s ease;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+
+.sell-product-form{
+    width: 100%;
+    height: auto;
+    padding-top: 10vh;
+    padding-bottom:10vh ;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0,0.6);
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

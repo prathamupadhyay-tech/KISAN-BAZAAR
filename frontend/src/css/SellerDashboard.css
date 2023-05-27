@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --main-color : #d1e6a5;
+    --dark-green:#3e4532;
+}
+
+.dashboard-container{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dashboard-wrapper{
+    width: 100%;
+    height: 100%;
+
+
+
+}
+
+
+.dash-navbar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10vh;
+    background-color: var(--dark-green);
+}
+.dash-navbar-wrapper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dash-logo{
+
+    background-image: url("../img/Main-Logo.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 40%;
+    height: 100%;
+
+}
+.dash-nav-links-div{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.dash-nav-links{
+    list-style: none;
+    font-size: 1.4rem;
+    overflow: hidden;
+    position: relative;
+    color: white;
+}
+.dash-nav-links::before{
+    content: "";
+    width: 100%;
+    height: 4px;
+    top: 0;
+    left: -100%;
+    transition: left 0.4s ease;
+    background-color: var(--main-color);
+    position: absolute;
+}
+.dash-nav-links:hover{
+    cursor: pointer;
+}
+.dash-nav-links:hover::before{
+    left: 0%;
+}
+.dash-nav-btn button{
+    font-size: 1.3rem;
+    background-color: #d1e6a5;
+    padding: 0.4em;
+    border: none;
+    border-radius: 10px;
+
+}
+.dash-nav-btn button:hover{
+    background-color:#abbc87 ;
+
+}

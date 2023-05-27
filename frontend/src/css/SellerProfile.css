@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --main-color : #d1e6a5;
+    --dark-green:#3e4532;
+}
+
+
+.seller-profile-container{
+    width: 100%;
+    /* padding-top: 10vh; */
+    height: 100vh;
+    background-image: linear-gradient( #3e4532, #d1e6a5 );
+    position: relative;
+    z-index: -2;
+    display: flex;
+    justify-content: center;
+
+}
+.seller-container-wrapper{
+    width: 60%;
+    height: 100%;
+    padding-top:3em;
+   
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 2em;
+
+}
+.main-profile-div{
+    display: flex;
+    width: 30%;
+    height: 100%;
+   
+    flex-direction: column;
+}
+.Profile-pic{
+    background-image: url("../img/farmer.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 24em;
+    height: 25em;
+    
+    
+}
+.Profile-details{
+    
+    background-color: white;
+    height: auto;
+    padding: 6%;
+    padding-bottom: 3em;
+    padding-top: 3em;
+    width: 20em;
+    color:  var(--dark-green);
+    display: flex;
+    font-size: 1.2rem;
+    gap: 5%;
+    box-shadow: 0px 40px 70px 0px var(--dark-green);
+}
+.Profile-details div{
+    display: flex;
+    flex-direction: column;
+    gap: 4%;
+}
+.Profile-details div p{
+    margin: 0;
+}
+.profile-achivements-div{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+
+}
+.profile-achivements{
+    box-shadow: 0px 0px 2px 0px;
+    width: 100%;
+    height: 40%;
+    background-color: white;
+    border-radius: 1em;
+}

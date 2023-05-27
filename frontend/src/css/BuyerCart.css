@@ -1,0 +1,46 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --main-color : #d1e6a5;
+}
+
+.BuyerCart-heading {
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.BuyerCart-heading h1{
+    font-size: 3rem;
+    color: white;
+}
+.BuyerCart-heading p{
+    font-size: 1.6rem;
+    color: white;
+}
+.BuyerCart-heading h1 span{
+    font-size: 4rem;
+    color: var(--main-color);
+}
+.buyercart-main-container{
+    padding-top:14vh;
+    padding-bottom: 14vh;
+    width: 100%;
+    position: absolute;
+    z-index: -4;
+    background-color: rgb(122, 122, 122);
+    min-height: 100vh;
+    max-height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+   
+}

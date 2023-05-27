@@ -1,0 +1,15 @@
+import express  from "express";
+const userRouter = express.Router();
+import {  signUpSeller, signInSeller, signInBuyer,signUpBuyer} from "../controller/auth.js";
+import {validateSignIn, validateSignUp} from "../validator/authValidator.js";
+import { isValid } from "../validator/commonValidator.js";
+import { isValidSeller , isValidBuyer } from "../middleware/middleware.js";
+import { isSignedIn } from "../middleware/middleware.js";
+userRouter.post("/seller/signup" ,validateSignUp , isValid, signUpSeller);
+userRouter.post("/seller/signin" ,validateSignIn , isValid, signInSeller);
+userRouter.post("/buyer/signup" ,validateSignUp , isValid, signUpBuyer);
+userRouter.post("/buyer/signin" ,validateSignIn , isValid, signInBuyer);
+userRouter.post("/user/verify" ,isSignedIn ,(req,res) => res.status(200).json({user:req.user}));
+userRouter.post("/seller/verify" ,isSignedIn , isValidSeller, (req,res) => res.status(200).json({user:req.user}));
+userRouter.post("/buyer/verify" ,isSignedIn , isValidBuyer, (req,res) => res.status(200).json({user:req.user}));
+export default userRouter;
